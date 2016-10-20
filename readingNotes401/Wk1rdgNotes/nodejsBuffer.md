@@ -60,7 +60,7 @@
   > that I/O is reallyyy reallyyy sloowwww. A ballpark figure would be that talking to a hard drive is about 100,000 times slower than talking to memory (e.g. RAM).
 
 1. **ALSO NOTE** that the key to understanding callbacks...
-  > is to realize that they are used when you don't know when some async operation will complete, but you do know where the operation will complete — the last line of the async function!
+  > is to realize that they are used when you don't know when some async operation will complete, but you do know where the operation will complete -- the last line of the async function!
 
 1. **NICE SCHEMATIC** of chaining callbacks...
 ```javascript
@@ -97,3 +97,10 @@ See below for more.
   * **[BIG-ENDIAN](https://en.wikipedia.org/wiki/Endianness):** Scheme in which the bits are arranged from [most-significant to least-significant](https://en.wikipedia.org/wiki/Most_significant_bit). 
   * **[LITTLE-ENDIAN](https://en.wikipedia.org/wiki/Endianness):** Just guess! 
 
+### [The Node Way](http://thenodeway.io/posts/understanding-error-first-callbacks/)
+#### QUESTIONS & COMMENTS
+1. **NOTE** That you can pass your errors from the function where they were thrown into a callback.  This is called 'error propagation', and means that you can, among other things, keep an error from shutting you down in the middle of an async process by kicking the can down the road a bit. 
+
+#### TERMS & CONCEPTS
+  * **[CONTINUATION PASSING STYLE](https://en.wikipedia.org/wiki/Continuation-passing_style):** The grand-daddy of callbacks
+  * **PARALLELL CALLBACKS:** Callback functions called at the same time; **NOTE** that this does *NOT* mean they will run simultaneously!  Sheesh!
