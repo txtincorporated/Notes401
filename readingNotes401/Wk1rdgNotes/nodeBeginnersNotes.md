@@ -6,7 +6,7 @@
   * Oh, never mind.  It's being used in the very next line.  Duh.
   * OK, but what is `http` in that case?  Available documentation seems to suggest that `require()` makes a file reference to a module with `exports` declared, including a directory path, yet here there is neither any path, nor any clearly evident 'http' file, let alone any declared `exports`; so what gives?
   * According to the [documentation here](https://nodejs.org/api/http.html#http_http), this apparently loads an interface (see 161017notes.md) containing an http header as defined, in this case, in said next line of the code  
-1. **NOTE** thanously
+1. **RE. PASSING FUNCTIONS AROUND:** Best illustration I've seen of this yet!
 
 
 #### TERMS & CONCEPTS
