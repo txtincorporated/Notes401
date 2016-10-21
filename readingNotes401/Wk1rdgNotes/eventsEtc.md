@@ -67,7 +67,7 @@ Authoring cycle is then essentially construct, define, then call:
 ### [Node.js Stream Documentation](https://nodejs.org/api/stream.html#stream_simplified_constructor_api)
 #### QUESTIONS & COMMENTS
 1. **NOTE:** 
-  > All streams are instances of `EventEmitter`.
+    > All streams are instances of `EventEmitter`.
 1. **RE TRANSFORM:** Ooooh!  I smell a bitmap-transformer trick!
 1. **NOTE** that duplex and transform streams each maintain two separate buffers, a Readable and a Writable, which operate independently of each other 
 
