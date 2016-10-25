@@ -1,0 +1,23 @@
+{
+  "name": "161024examples",
+  "version": "1.0.0",
+  "description": "classwork from Monday 10-24",
+  "main": "tcp.js",
+  "dependencies": {
+    "figlet": "^1.2.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "figlet": "^1.2.0",
+    "mocha": "^3.1.2"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "tcp",
+    "examples"
+  ],
+  "author": "Nathan P. Keene",
+  "license": "ISC"
+}
