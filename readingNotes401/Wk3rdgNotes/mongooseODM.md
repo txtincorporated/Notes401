@@ -113,12 +113,12 @@
       Middleware are useful for atomizing model logic and avoiding nested blocks of async code. Here are some other ideas:
          
       > * complex validation  
-        * removing dependent documents    
-          ( removing a user removes all his blogposts)  
-        * asynchronous defaults  
-        * asynchronous tasks that a certain action triggers  
-        * triggering custom events  
-        * notifications  
+      > * removing dependent documents    
+      >   ( removing a user removes all his blogposts)  
+      > * asynchronous defaults  
+      > * asynchronous tasks that a certain action triggers  
+      > * triggering custom events  
+      > * notifications  
 
 
 ---
