@@ -105,7 +105,7 @@
 
 
 #### TERMS & CONCEPTS
-  * **[Middleware](http://mongoosejs.com/docs/<middleware class="html"></middleware>):** Pre- and post- `hook` functions that run before or after, e.g., `save` operations in certain circumstances in Mongoose, as, for example, validation. 
+  * **[Middleware](http://mongoosejs.com/docs/<middleware class="html"></middleware>):** Pre- and post- `hook` functions that run before or after, e.g., `save` operations in certain circumstances in Mongoose, as, for example, validation.     
   > Use Cases
     Middleware are useful for atomizing model logic and avoiding nested blocks of async code. Here are some other ideas: 
     - complex validation
