@@ -131,6 +131,7 @@
 
 
 #### TERMS & CONCEPTS
-  * **[POPULATION](htbject):** The Mongo/Mongoose answer to `JOIN... ON... WHERE`
+  * **[POPULATION](htbject):** The Mongo/Mongoose answer to `JOIN... ON... WHERE`  
+  
     > Population is the process of automatically replacing the specified paths in the document with document(s) from other collection(s). We may populate a single document, multiple documents, plain object, multiple plain objects, or all objects returned from a query. Let's look at some examples.
 
