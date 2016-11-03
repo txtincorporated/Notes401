@@ -98,7 +98,8 @@
   ...see notes above re. testing.
 1. **NOTE**  That no `next` or `done` callbacks are passed to *`post`* hooks.
 1. **ALSO NOTE**  That  
-      > Error handling middleware is defined as middleware that takes one extra parameter: the 'error' that occurred as the first parameter to the function. Error handling middleware can then transform the error however you want.
+
+    > Error handling middleware is defined as middleware that takes one extra parameter: the 'error' that occurred as the first parameter to the function. Error handling middleware can then transform the error however you want.
 1. **RE VALIDATION ERRORS:**  Wow!  Their example shows the validation callback chaining a bunch of `asserts`, almost like they want to build testing right into the interface.
 1. **NOTE** That    
   > when running update validators, the document being updated may not be in the server's memory, so by default the value of `this` is not defined.
