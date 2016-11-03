@@ -118,6 +118,10 @@
     * notifications
 
 
+---
+
+
+
 ### [POPULATE](http://mongoosejs.com/docs/populate.html)
 #### QUESTIONS & COMMENTS
 1. **NOTE**  That this is an incredibly powerful technique for cross-referencing complex sets of documents without having to manually add or synchronize properties between them, and starts to look like something that would plug nicely in to a relationship management ro content management tool very nicely.
