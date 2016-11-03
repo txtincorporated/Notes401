@@ -93,8 +93,9 @@
 
 ### [VALIDATION](http://mongoosejs.com/docs/validation.html)
 #### QUESTIONS & COMMENTS
-1. **NOTE**  That 
-  > Validation is [middleware](http://mongoosejs.com/docs/middleware.html). Mongoose registers validation as a `pre('save')` hook on every schema by default.     
+1. **NOTE**  That  
+
+    > Validation is [middleware](http://mongoosejs.com/docs/middleware.html). Mongoose registers validation as a `pre('save')` hook on every schema by default.     
   ...see notes above re. testing.
 1. **NOTE**  That no `next` or `done` callbacks are passed to *`post`* hooks.
 1. **ALSO NOTE**  That  
