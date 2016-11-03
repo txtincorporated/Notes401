@@ -108,13 +108,13 @@
   * **[Middleware](http://mongoosejs.com/docs/<middleware class="html"></middleware>):** Pre- and post- `hook` functions that run before or after, e.g., `save` operations in certain circumstances in Mongoose, as, for example, validation. 
   > Use Cases
     Middleware are useful for atomizing model logic and avoiding nested blocks of async code. Here are some other ideas: 
-  > - complex validation
-  > - removing dependent documents    
-  >   ( removing a user removes all his blogposts)
-  > - asynchronous defaults
-  > - asynchronous tasks that a certain action triggers
-  > - triggering custom events
-  > - notifications
+    - complex validation
+    - removing dependent documents    
+      ( removing a user removes all his blogposts)
+    - asynchronous defaults
+    - asynchronous tasks that a certain action triggers
+    - triggering custom events
+    - notifications
 
 
 ---
