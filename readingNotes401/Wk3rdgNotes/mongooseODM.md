@@ -100,22 +100,21 @@
 1. **ALSO NOTE**  That     
   > Error handling middleware is defined as middleware that takes one extra parameter: the 'error' that occurred as the first parameter to the function. Error handling middleware can then transform the error however you want.
 1. **RE VALIDATION ERRORS:**  Wow!  Their example shows the validation callback chaining a bunch of `asserts`, almost like they want to build testing right into the interface.
-1. **NOTE** That 
+1. **NOTE** That    
   > when running update validators, the document being updated may not be in the server's memory, so by default the value of `this` is not defined.
 
 
 #### TERMS & CONCEPTS
   * **[Middleware](http://mongoosejs.com/docs/<middleware class="html"></middleware>):** Pre- and post- `hook` functions that run before or after, e.g., `save` operations in certain circumstances in Mongoose, as, for example, validation. 
   > Use Cases
-    Middleware are useful for atomizing model logic and avoiding nested blocks of async code. Here are some other ideas:
-
-  > * complex validation
-    * removing dependent documents    
-      ( removing a user removes all his blogposts)
-    * asynchronous defaults
-    * asynchronous tasks that a certain action triggers
-    * triggering custom events
-    * notifications
+    Middleware are useful for atomizing model logic and avoiding nested blocks of async code. Here are some other ideas: 
+  > - complex validation
+  > - removing dependent documents    
+  >   ( removing a user removes all his blogposts)
+  > - asynchronous defaults
+  > - asynchronous tasks that a certain action triggers
+  > - triggering custom events
+  > - notifications
 
 
 ---
