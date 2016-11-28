@@ -45,41 +45,6 @@
 ---  
 
 
-### [DEPENDENCY INJECTION](https://docs.angularjs.org/guide/di)   
-#### QUESTIONS & COMMENTS   
-1. **NOTE**  that [Angular's order of execution](http://stackoverflow.com/questions/20663076/angularjs-app-run-documentation) is:    
-  1. `app.config()`   
-  1. `app.run()`    
-  1. [compile functions, if found]    
-  1. `app.controller()`   
-  1. [link functions, if found]   
-1. **NOTE** that in addition to array annotation (see below), [`$inject` annotation](https://docs.angularjs.org/guide/di) can also be used to pass dependencies into a controller; they can also be passed using so-called 'implicit' annotation, i.e., just the same as with any other functional parameter.  However, if the app is minified the last method will fail to prevent their being renamed, most likely resulting in a broken app.   
-
-
-#### TERMS & CONCEPTS   
-  * **`config()` method:** defines custom values before the application actually starts.  
-  * **`run()` method:** functionally similar to `main` in other apps in that it starts the application up.  This is a place where values can be set that need to be global to the app and are hard to unit test; typically might be used for, e.g., redirecting unauthenticated routing requests.  
-  * **`factory()` methods:** used to define [directives](https://docs.angularjs.org/guide/directive), [services](https://docs.angularjs.org/guide/services), and [filters](https://docs.angularjs.org/guide/filter).  
-  * **`module()` methods:** `config()` and `run()`.  
-  * **`controller()` methods:**
-    >  Controllers are "classes" or "constructor functions" that are responsible for providing the application behavior that supports the declarative markup in the template. The recommended way of declaring Controllers is using the array notation:
-    > ```javascript
-      someModule.controller('MyController', ['$scope', 'dep1', 'dep2', function($scope, dep1, dep2) {
-        ...
-        $scope.aMethod = function() {
-          ...
-        }
-        ...
-      }]);      
-      ```   
-
-  **NOTE**  that controllers can take `$scope` and [resolves](https://docs.angularjs.org/api/ngRoute/provider/$routeProvider#when) in addition to their other dependencies.
-
-  * **array notation:** allows injected dependencies to keep their names during minification and thus avoid breaking the app.
-
----     
-
-
 ### [DIRECTIVES](https://docs.angularjs.org/guide/directive)
 #### QUESTIONS & COMMENTS
 1. **NOTE**  that directives are "injectable just like a controller", and seem to be a kind of cousin to the `module.controller` in other ways as well, e.g., in that they tell the module how to make the page do stuff; or again they can be related to services in that they incorporate factory functions:
