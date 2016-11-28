@@ -41,19 +41,20 @@
       }]);
       ```
     > ...Back to the initial question: How does the `InvoiceController` get a reference to the `currencyConverter` function? In Angular, this is done by simply defining arguments on the constructor function. With this, the injector is able to create the objects in the right order and pass the previously created objects into the factories of the objects that depend on them.  In our example, the `InvoiceController` has an argument named `currencyConverter`. By this, Angular knows about the dependency between the controller and the service and calls the controller with the service instance as argument.
-
 ---     
+
 
 
 ### [DEPENDENCY INJECTION](https://docs.angularjs.org/guide/di)
 #### QUESTIONS & COMMENTS
-1. **NOTE**  that [Angular's order of execution](http://stackoverflow.com/questions/20663076/angularjs-app-run-documentation) is:
+
+1. **NOTE**  that [Angular's order of execution](http://stackoverflow.com/questions/20663076/angularjs-app-run-documentation) is:  
 
     1. `app.config()`
     1. `app.run()`
     1. [compile functions, if found]
     1. `app.controller()`
-    1. [link functions, if found]
+    1. [link functions, if found]  
 
 1. **NOTE** that in addition to array annotation (see below), [`$inject` annotation](https://docs.angularjs.org/guide/di) can also be used to pass dependencies into a controller; they can also be passed using so-called 'implicit' annotation, i.e., just the same as with any other functional parameter.  However, if the app is minified the last method will fail to prevent their being renamed, most likely resulting in a broken app.
 
