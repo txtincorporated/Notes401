@@ -48,11 +48,13 @@
 ### [DEPENDENCY INJECTION](https://docs.angularjs.org/guide/di)
 #### QUESTIONS & COMMENTS
 1. **NOTE**  that [Angular's order of execution](http://stackoverflow.com/questions/20663076/angularjs-app-run-documentation) is:
+
     1. `app.config()`
     1. `app.run()`
     1. [compile functions, if found]
     1. `app.controller()`
     1. [link functions, if found]
+
 1. **NOTE** that in addition to array annotation (see below), [`$inject` annotation](https://docs.angularjs.org/guide/di) can also be used to pass dependencies into a controller; they can also be passed using so-called 'implicit' annotation, i.e., just the same as with any other functional parameter.  However, if the app is minified the last method will fail to prevent their being renamed, most likely resulting in a broken app.
 
 
