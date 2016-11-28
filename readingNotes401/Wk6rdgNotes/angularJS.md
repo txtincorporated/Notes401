@@ -41,8 +41,8 @@
       }]);
       ```
     > ...Back to the initial question: How does the `InvoiceController` get a reference to the `currencyConverter` function? In Angular, this is done by simply defining arguments on the constructor function. With this, the injector is able to create the objects in the right order and pass the previously created objects into the factories of the objects that depend on them.  In our example, the `InvoiceController` has an argument named `currencyConverter`. By this, Angular knows about the dependency between the controller and the service and calls the controller with the service instance as argument.
----     
 
+---     
 
 
 ### [DEPENDENCY INJECTION](https://docs.angularjs.org/guide/di)
