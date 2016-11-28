@@ -48,7 +48,8 @@
 
 ### [DEPENDENCY INJECTION](https://docs.angularjs.org/guide/di)
 #### QUESTIONS & COMMENTS
-1. **NOTE**  that [Angular's order of execution](http://stackoverflow.com/questions/20663076/angularjs-app-run-documentation) is:
+1. **NOTE**  that [Angular's order of execution](http://stackoverflow.com/questions/20663076/angularjs-app-run-documentation) is:  
+
 1. `app.config()`
 1. `app.run()`
 1. [compile functions, if found]
