@@ -1,4 +1,4 @@
-# Code 401 
+# Code 401
 ## 11/25/16
 ## Notes:  [AngularJS](https://docs.angularjs.org/guide)
 
@@ -13,7 +13,7 @@
 
 1. **WHY**  in the example does the controller first have to be instatiated explicitly against Angular as a module and only then as a controller instance against that?  Why can't it just be instantiated directly against Angular?  If `controller` is an object on `Angular.module`, in fact, why can't it just be instantiated directly?  Is this because we're working with JS 'classes' and not just vanilla objects?
   - **A: [BECAUSE](https://docs.angularjs.org/guide/concepts#di)** this is how Angular implements the so-called [dependency-injection](https://en.wikipedia.org/wiki/Dependency_injection) design pattern.
-  - **NOTE** the bracketed arguments being passed into functions; these are dependencies of those functions, abstracted out so as to be reusable.  The chaining dot-notation in the method call is similar to that used in vanilla JS, in this case allowing a given `module` object's component methods to be defined as, e.g., either `controller` or `factory` types. 
+  - **NOTE** the bracketed arguments being passed into functions; these are dependencies of those functions, abstracted out so as to be reusable.  The chaining dot-notation in the method call is similar to that used in vanilla JS, in this case allowing a given `module` object's component methods to be defined as, e.g., either `controller` or `factory` types.
 
 
 
@@ -45,24 +45,23 @@
 ---  
 
 
+### [DEPENDENCY INJECTION](https://docs.angularjs.org/guide/di)   
+#### QUESTIONS & COMMENTS   
+1. **NOTE**  that [Angular's order of execution](http://stackoverflow.com/questions/20663076/angularjs-app-run-documentation) is:    
+  1. `app.config()`   
+  1. `app.run()`    
+  1. [compile functions, if found]    
+  1. `app.controller()`   
+  1. [link functions, if found]   
+1. **NOTE** that in addition to array annotation (see below), [`$inject` annotation](https://docs.angularjs.org/guide/di) can also be used to pass dependencies into a controller; they can also be passed using so-called 'implicit' annotation, i.e., just the same as with any other functional parameter.  However, if the app is minified the last method will fail to prevent their being renamed, most likely resulting in a broken app.   
 
-### [DEPENDENCY INJECTION](https://docs.angularjs.org/guide/di)
-#### QUESTIONS & COMMENTS
-1. **NOTE**  that [Angular's order of execution](http://stackoverflow.com/questions/20663076/angularjs-app-run-documentation) is:  
-  1. `app.config()`
-  1. `app.run()`
-  1. [compile functions, if found]
-  1. `app.controller()`
-  1. [link functions, if found]
-1. **NOTE** that in addition to array annotation (see below), [`$inject` annotation](https://docs.angularjs.org/guide/di) can also be used to pass dependencies into a controller; they can also be passed using so-called 'implicit' annotation, i.e., just the same as with any other functional parameter.  However, if the app is minified the last method will fail to prevent their being renamed, most likely resulting in a broken app.
 
-
-#### TERMS & CONCEPTS
+#### TERMS & CONCEPTS   
   * **`config()` method:** defines custom values before the application actually starts.  
   * **`run()` method:** functionally similar to `main` in other apps in that it starts the application up.  This is a place where values can be set that need to be global to the app and are hard to unit test; typically might be used for, e.g., redirecting unauthenticated routing requests.  
   * **`factory()` methods:** used to define [directives](https://docs.angularjs.org/guide/directive), [services](https://docs.angularjs.org/guide/services), and [filters](https://docs.angularjs.org/guide/filter).  
   * **`module()` methods:** `config()` and `run()`.  
-  * **`controller()` methods:** 
+  * **`controller()` methods:**
     >  Controllers are "classes" or "constructor functions" that are responsible for providing the application behavior that supports the declarative markup in the template. The recommended way of declaring Controllers is using the array notation:
     > ```javascript
       someModule.controller('MyController', ['$scope', 'dep1', 'dep2', function($scope, dep1, dep2) {
@@ -97,9 +96,9 @@
     > At a high level, directives are markers on a DOM element (such as an attribute, element name, comment or CSS class) that tell AngularJS's **HTML compiler** (`$compile`) to attach a specified behavior to that DOM element (e.g. via event listeners), or even to transform the DOM element and its children.
 
     > Angular comes with a set of these directives built-in, like `ngBind`, `ngModel`, and `ngClass`. Much like you create controllers and services, you can create your own directives for Angular to use...  
-  * **isolate [scope](https://docs.angularjs.org/api/ng/service/$compile#-scope-):** 
+  * **isolate [scope](https://docs.angularjs.org/api/ng/service/$compile#-scope-):**
     > ...The 'isolate' scope differs from normal scope in that it does not prototypically inherit from its parent scope. This is useful when creating reusable components **[relative to a given directive to which the [scope](https://docs.angularjs.org/api/ng/service/$compile#-scope-) is attached]**, which should not accidentally read or modify data in the parent scope.
-  * **[transclude](https://doope):** 
+  * **[transclude](https://doope):**
     > What does this transclude option do, exactly? transclude makes the contents of a directive with this option have access to the scope outside of the directive rather than inside.
 
 
@@ -121,16 +120,16 @@
 
 ### [COMPILER](https://docs.angularjs.org/guide/compiler)
 #### QUESTIONS & COMMENTS
-1. **NOTE**  that in regard to the **LINK** process, 
-  > Any changes in the scope model are reflected in the view, and any user interactions with the view are reflected in the scope model. This makes the scope model the single source of truth. 
+1. **NOTE**  that in regard to the **LINK** process,
+  > Any changes in the scope model are reflected in the view, and any user interactions with the view are reflected in the scope model. This makes the scope model the single source of truth.
 
   This seems like a good thing to remember about Angular generally, not just in connection with this particular detail.
 
 
 #### TERMS & CONCEPTS
   * **COMPILE:** First phase of the **COMPILER** process, in which Compiler proceeds to "traverse the DOM and collect all of the directives.  The result is a linking function."  
-  * **LINK:** The second phase of the process, in which the Compiler goes on to "combine the directives with a scope and produce a live view" usually either element by element or selector by selector. 
-    * **NOTE** that 
+  * **LINK:** The second phase of the process, in which the Compiler goes on to "combine the directives with a scope and produce a live view" usually either element by element or selector by selector.
+    * **NOTE** that
     > A link function allows the directive to register listeners to the specific cloned DOM element instance as well as to copy content into the DOM from the scope.
 
-    That is, `link()` is kind of the secret sauce. 
+    That is, `link()` is kind of the secret sauce.
