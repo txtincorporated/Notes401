@@ -105,28 +105,3 @@
 |   | - look at formats and styling	| **nk** |
 | **11:30-noon** |   |   |
 |   | - prepare for presentation | **nk** |
-
-
-# FINAL PROJECT INDIVIDUAL SUBMISSION RESPONSES
-## QUESTIONS:
-1. What did you personally contribute?
-1. What did you learn?
-1. What do you wish you knew better?
-1. How was it working on a team?
-1. Reflect on your progress from the start of 401
-1. Anything else?
-
-# RESPONSES: 
-1: Project log here showing what I worked on both individually and collaboratively throughout the week.   I would say my two biggest discrete contributions were writing the `doing` component, in the process setting up the essential code for fetching filtered results from the backend which became the pattern for performing the same work in the `planning` component as well; and debugging and refactoring (thanks, Marty!) the login/logout component to behave like a standard-issue web app.
-
-2: I think Angular bindings really came together for me on this project in a way I didn't realize they hadn't done yet.  After the review lecture two weeks ago I felt like I understood them much better, but this project really forced me to work with the difference between binding a value for the controller via the template and doing so through `$stateProvider`.  
-
-This project also consolidated something I learned on the midterm project, namely that the web token is a great tool for managing queries beyond just its role in authentication, given that you can load all kinds of information about the user into the payload along with it, which can then be used to add specificity to requests.  In both projects for this course that has meant specifically being able to use the Mongoose `_id` property of the user document to fetch just the given user's authorized data without having to pass the id in the clear.
-
-3: I wish we had taken a bit of time to build Angular Material in from the start.  I think we really underestimated its complexity and doing so led us to apply it hurriedly in the last day or so of work; it was a surprise to see how strongly the `md-` tag prefix interacts with the rest of the Angular code, to the point of simply breaking directives that work fine without it and forcing you to think about how to refactor them when you'd rather be doing other things instead.  If we'd thought about this earlier on I think we could have built something a little sharper looking and more responsive in the browser without that much more trouble.
-
-4: I think we really came together remarkably as a team in the last two or three days of the project.  It seemed like this was a really hard one to get to gel, and I think we had a hard time getting coordinated with each other as a result.  Once it started to fall into place, though, it was a very pleasant surprise how quickly it did so and how smoothly we were able to work together.
-
-5: As Michael and I were walking out on Thursday night we couldn't help but marvel at the huge technical difference between what we're able to do pretty confidently now and what we were able to do even at the start of 401.  It feels like I can do things now that would have literally boggled my mind even six weeks ago, let alone ten or twelve, and it's great to come out of the final course in the CF sequence feeling this confident; a week or two in I really wasn't sure that was going to be the case.
-
-6: It feels like a bit of a shock after ten weeks of a boot camp schedule to be suddenly faced with having to get up every day and decide what *my* schedule is going to be.  More sobering than that to me as someone who a year ago couldn't have begun to write a line of code is the realization that, having so quickly gained what feels like a such a massive knowledge base in such a highly specialized subject area, I now have to go out and talk to people about how I am able to apply it on their behalf in real world settings with real dollars and cents on the line.  On the one hand I feel like I've just completed something epic; on the other I feel like the actual journey has barely even begun.
